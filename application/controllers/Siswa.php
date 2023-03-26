@@ -114,6 +114,21 @@ class Siswa extends CI_Controller
             'required' => '%s harus di isi!!'
         ));
     }
+
+    public function delete($id){
+        $where = array('id_siswa => $id');
+
+        $this->Siswa_model->delete($where, 'tbl_siswa');
+            $this->session->set_flashdata(
+                'pesan',
+                '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                Data Berhasil Diupdate!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>');
+              redirect('siswa');        
+    }
 }
 
 /* End of file Controllername.php */

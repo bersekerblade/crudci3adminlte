@@ -27,7 +27,7 @@
                         <td> <?= $ssw->nomor_telepon ?></td>
                         <td>
                             <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#update<?= $ssw->id_siswa ?>"><i class="fas fa-edit"></i></button>
-                            <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                            <a href="<?= base_url('siswa/delete/' . $ssw->id_siswa) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda ingin menghapus?')"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
                 </tbody>

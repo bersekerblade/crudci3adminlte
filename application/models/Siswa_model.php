@@ -20,6 +20,11 @@ class Siswa_model extends CI_Model {
         
     }
 
+    public function delete ($where, $table){
+        $this->db->where($where);
+        $this->db->delete($table); 
+    }
+
 }
 
 /* End of file Siswa_model.php */
